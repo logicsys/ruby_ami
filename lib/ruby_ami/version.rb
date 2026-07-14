@@ -1,4 +1,4 @@
 # encoding: utf-8
 module RubyAMI
-  VERSION = "3.0.0.rc3"
+  VERSION = "3.0.1"
 end

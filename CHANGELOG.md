@@ -1,4 +1,9 @@
-# [develop](https://github.com/adhearsion/ruby_ami)
+# [develop](https://github.com/logicsys/ruby_ami)
+
+# [3.0.1](https://github.com/logicsys/ruby_ami/compare/v3.0.0...v3.0.1) - 2026-07-14
+  * First stable release of the logicsys fork (supersedes 3.0.0.rc3)
+  * Bugfix: Compatibility with Celluloid 0.18 — `Celluloid::Logger` was renamed to `Celluloid::Internals::Logger`; the old trace shim shadowed `::Logger` and crashed `Stream` when using the default logger
+  * Ruby 3.x support, RSpec 3+ spec suite, use HTTPS for gem sources
 
 # [3.0.0](https://github.com/adhearsion/ruby_ami/compare/v2.4.0...v3.0.0) - [2016-07-25](https://rubygems.org/gems/ruby_ami/versions/3.0.0)
   * Breaking change: Ruby 1.9 is no longer supported. Minimum supported versions are Ruby 2.2.0 and JRuby 9.0.0.0
