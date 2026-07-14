@@ -15,7 +15,7 @@ class ServerMock
   end
 
   def finalize
-    Logger.debug "ServerMock finalizing"
+    Celluloid::Internals::Logger.debug "ServerMock finalizing"
     @server.close if @server
     @clients.each(&:close)
   end
@@ -33,7 +33,7 @@ class ServerMock
   end
 
   def receive_data(data)
-    Logger.debug "ServerMock receiving data: #{data}"
+    Celluloid::Internals::Logger.debug "ServerMock receiving data: #{data}"
     @mock_target.receive_data data, self
   end
 

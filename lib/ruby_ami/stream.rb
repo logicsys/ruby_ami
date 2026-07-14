@@ -22,7 +22,7 @@ module RubyAMI
 
     finalizer :finalize
 
-    def initialize(host, port, username, password, event_callback, logger = Logger, timeout = 0)
+    def initialize(host, port, username, password, event_callback, logger = Celluloid::Internals::Logger, timeout = 0)
       super()
       @host, @port, @username, @password, @event_callback, @logger, @timeout = host, port, username, password, event_callback, logger, timeout
       logger.debug "Starting up..."
